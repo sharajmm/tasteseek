@@ -1,5 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export async function GET(request: NextRequest) {
+  return NextResponse.json({
+    message:
+      "recommend-foods API is reachable. Use POST to get recommendations.",
+  });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { cuisine, ingredients } = await request.json();
